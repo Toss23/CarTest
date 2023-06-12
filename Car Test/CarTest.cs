@@ -452,6 +452,11 @@ namespace Car_Test
                 direction -= 4;
             }
 
+            while (direction < 0)
+            {
+                direction += 4;
+            }
+
             return direction;
         }
 
@@ -467,6 +472,39 @@ namespace Car_Test
             _roadmap[x, y] = 6;
             PictureBox road = panel.Controls[x + "_" + y] as PictureBox;
             road.Image = Properties.Resources.Block_AI;
+        }
+
+        private void button_up_Click(object sender, EventArgs e)
+        {
+            MoveCar();
+        }
+
+        private void button_left_Click(object sender, EventArgs e)
+        {
+            RotateCar(-1);
+        }
+
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            RotateCar(2);
+        }
+
+        private void button_right_Click(object sender, EventArgs e)
+        {
+            RotateCar(1);
+        }
+
+        private void RotateCar(int rotate)
+        {
+            int x = _carPosition[0];
+            int y = _carPosition[1];
+            int direction = _carPosition[2];
+
+            direction = RotateRight(direction, rotate);
+            _carPosition[2] = direction;
+
+            PictureBox road = panel.Controls[x + "_" + y] as PictureBox;
+            road.Image = _carBitmaps[direction];
         }
     }
 }

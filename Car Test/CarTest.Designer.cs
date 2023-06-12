@@ -42,6 +42,10 @@ namespace Car_Test
             this.trackBar = new System.Windows.Forms.TrackBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.label_speed = new System.Windows.Forms.Label();
+            this.button_up = new System.Windows.Forms.Button();
+            this.button_back = new System.Windows.Forms.Button();
+            this.button_left = new System.Windows.Forms.Button();
+            this.button_right = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,11 +155,55 @@ namespace Car_Test
             this.label_speed.TabIndex = 10;
             this.label_speed.Text = "Скорость: 1000 мс";
             // 
+            // button_up
+            // 
+            this.button_up.Location = new System.Drawing.Point(975, 551);
+            this.button_up.Name = "button_up";
+            this.button_up.Size = new System.Drawing.Size(60, 55);
+            this.button_up.TabIndex = 11;
+            this.button_up.Text = "Move";
+            this.button_up.UseVisualStyleBackColor = true;
+            this.button_up.Click += new System.EventHandler(this.button_up_Click);
+            // 
+            // button_back
+            // 
+            this.button_back.Location = new System.Drawing.Point(975, 612);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(60, 55);
+            this.button_back.TabIndex = 12;
+            this.button_back.Text = "Rotate Back";
+            this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
+            // 
+            // button_left
+            // 
+            this.button_left.Location = new System.Drawing.Point(909, 612);
+            this.button_left.Name = "button_left";
+            this.button_left.Size = new System.Drawing.Size(60, 55);
+            this.button_left.TabIndex = 13;
+            this.button_left.Text = "Rotate Left";
+            this.button_left.UseVisualStyleBackColor = true;
+            this.button_left.Click += new System.EventHandler(this.button_left_Click);
+            // 
+            // button_right
+            // 
+            this.button_right.Location = new System.Drawing.Point(1041, 612);
+            this.button_right.Name = "button_right";
+            this.button_right.Size = new System.Drawing.Size(60, 55);
+            this.button_right.TabIndex = 14;
+            this.button_right.Text = "Rotate Right";
+            this.button_right.UseVisualStyleBackColor = true;
+            this.button_right.Click += new System.EventHandler(this.button_right_Click);
+            // 
             // CarTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 748);
+            this.Controls.Add(this.button_right);
+            this.Controls.Add(this.button_left);
+            this.Controls.Add(this.button_back);
+            this.Controls.Add(this.button_up);
             this.Controls.Add(this.label_speed);
             this.Controls.Add(this.trackBar);
             this.Controls.Add(this.label_best);
@@ -192,6 +240,10 @@ namespace Car_Test
         private System.Windows.Forms.TrackBar trackBar;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label label_speed;
+        private System.Windows.Forms.Button button_up;
+        private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.Button button_left;
+        private System.Windows.Forms.Button button_right;
     }
 }
 
